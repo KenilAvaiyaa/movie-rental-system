@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+.slick-track {
+  margin-left: 0 !important;
+}
+
+.movie-detail-item {
+  flex-shrink: 0;
+  width: 100px;
+  margin-right: 1rem;
+  font-weight: 600;
+}
+
+ul {
+  list-style-type: none !important;
+}
