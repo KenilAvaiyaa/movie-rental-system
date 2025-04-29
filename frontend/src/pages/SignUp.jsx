@@ -1,4 +1,3 @@
-import { Link, Navigate, useNavigate } from "react-router-dom";
 import {
   Card,
   CardHeader,
@@ -10,25 +9,23 @@ import {
   Button,
 } from "@material-tailwind/react";
 import { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import api from "../api/api.js";
 
-function Login() {
+function SignUp() {
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleLogin = async () => {
+  const handleSignup = async () => {
     try {
-      const response = await api.post("token/", {
-        username: email,
-        password: password,
-      });
-      localStorage.setItem("access_token", response.data.access);
-      localStorage.getItem("access_token");
-      navigate("/");
+      await api.post("signup/", { username, email, password });
+      alert("Signup successful! Please login.");
+      navigate("/login");
     } catch (error) {
       console.error(error);
-      alert("You my friend are a imposter!!!!!");
+      alert(`Signup failed: ${JSON.stringify(error.response.data)}`);
     }
   };
 
@@ -41,42 +38,52 @@ function Login() {
           className="mb-4 grid h-28 place-items-center"
         >
           <Typography variant="h3" color="white">
-            Sign In
+            Sign Up
           </Typography>
         </CardHeader>
         <CardBody className="flex flex-col gap-4">
           <Input
+            label="Username"
+            size="lg"
+            type="text"
+            value={username}
+            onChange={(e) => {
+              setUsername(e.target.value);
+            }}
+          />
+          <Input
             label="Email"
+            size="lg"
             type="email"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            size="lg"
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
           />
           <Input
             label="Password"
+            size="lg"
             type="password"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            size="lg"
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
           />
-          <div className="-ml-2.5">
-            <Checkbox label="Remember Me" />
-          </div>
         </CardBody>
         <CardFooter className="pt-0">
-          <Button variant="gradient" fullWidth onClick={handleLogin}>
-            Sign In
+          <Button variant="gradient" fullWidth onClick={handleSignup}>
+            Sign Up
           </Button>
           <Typography variant="small" className="mt-6 flex justify-center">
-            Don&apos;t have an account?
-            <Link to="/signup">
+            Already have a account?
+            <Link to="/login">
               <Typography
                 as="span"
                 variant="small"
                 color="blue-gray"
                 className="ml-1 font-bold"
               >
-                Sign up
+                login
               </Typography>
             </Link>
           </Typography>
@@ -86,4 +93,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default SignUp;

@@ -96,7 +96,7 @@ export function NavbarSearch() {
           </a>
         </Typography>
       </Link>
-      <Link to={"/profile"}>
+      <Link to={"/login"}>
         <Typography
           as="li"
           variant="small"
@@ -118,7 +118,7 @@ export function NavbarSearch() {
             />
           </svg>
           <a href="#" className="flex items-center">
-            Profile
+            Login
           </a>
         </Typography>
       </Link>

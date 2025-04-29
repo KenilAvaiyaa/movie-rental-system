@@ -7,7 +7,7 @@ import Library from "./pages/Library.jsx";
 import NavbarSearch from "./components/NavbarSearch.jsx";
 import UserProfile from "./pages/UserProfile.jsx";
 import UserRentedMovies from "./pages/UserRentedMovies.jsx";
-// import Login from "./pages/Login.jsx";
+import Signup from "./pages/SignUp.jsx";
 import React from "react";
 
 function App() {
@@ -29,7 +29,8 @@ function App() {
           <Route path="/movie/:id" element={<MovieDetails />} />
           <Route path="/search/:movieName" element={<Search />} />
           <Route path="/library" element={<Library />} />
-          <Route path="/profile" element={<UserProfile />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
           <Route path="/rented-movies" element={<UserRentedMovies />} />
           {/* <Route path="*" element={<Navigate to="/" replace />} /> */}
         </Routes>
