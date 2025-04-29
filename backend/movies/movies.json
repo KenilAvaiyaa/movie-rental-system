@@ -5,8 +5,8 @@
         "imdbID": "tt0137523",
         "Type": "movie",
         "Poster": "https://m.media-amazon.com/images/M/MV5BOTgyOGQ1NDItNGU3Ny00MjU3LTg2YWEtNmEyYjBiMjI1Y2M5XkEyXkFqcGc@._V1_SX300.jpg",
-        "rented": true,
-        "rented_by": "user1"
+        "rented": false,
+        "rented_by": null
     },
     {
         "Title": "Oldboy",
