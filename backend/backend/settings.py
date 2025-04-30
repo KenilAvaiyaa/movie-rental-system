@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+from datetime import timedelta
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -132,3 +134,14 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
 }
+
+SIMPLE_JWT = {
+    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=60),  # optional
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=1),     # optional
+    "AUTH_HEADER_TYPES": ("Bearer",),
+    "USER_ID_FIELD": "id",
+    "USER_ID_CLAIM": "user_id",
+    # "TOKEN_OBTAIN_SERIALIZER": "movies.serializers.CustomTokenObtainPairSerializer",  # 👈 this is the key fix
+    "TOKEN_OBTAIN_SERIALIZER": "..movies.users.serializers.CustomTokenObtainPairSerializer",  # 👈 this is the key fix
+}
+

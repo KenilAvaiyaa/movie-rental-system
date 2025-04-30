@@ -9,6 +9,7 @@ import {
 import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { FunnelIcon } from "@heroicons/react/24/outline";
 import MovieCard from "../components/MovieCard"; // Import your MovieCard component
+import api from "../api/api.js";
 
 function Library() {
   // State for filters
@@ -24,115 +25,23 @@ function Library() {
 
   // Pagination state and functions
   const [active, setActive] = useState(1);
-  const [moviesPerPage] = useState(12); // Number of movies per page
+  const [moviesPerPage] = useState(12);
 
-  // Example movies data - replace with your actual data or API call
-  const [movies, _] = useState([
-    {
-      id: 1,
-      title: "O'Dessa",
-      year: 2024,
-      rating: 5.5,
-      type: "Movie",
-      image: "/path-to-odessa-image.jpg",
-    },
-    {
-      id: 2,
-      title: "The Exorcism of Saint Patrick",
-      year: 2024,
-      rating: 5.5,
-      type: "Movie",
-      image: "/path-to-exorcism-image.jpg",
-    },
-    {
-      id: 3,
-      title: "Shredded",
-      year: 2024,
-      rating: 5.5,
-      type: "Movie",
-      image: "/path-to-shredded-image.jpg",
-    },
-    {
-      id: 4,
-      title: "Bill Burr: Drop Dead Years",
-      year: 2023,
-      rating: 5.5,
-      type: "Movie",
-      image: "/path-to-billburr-image.jpg",
-    },
-    {
-      id: 5,
-      title: "Mujigae",
-      year: 2024,
-      rating: 5.5,
-      type: "Movie",
-      image: "/path-to-mujigae-image.jpg",
-    },
-    {
-      id: 6,
-      title: "Chuck Billy and The Marvelous Guava Tree",
-      year: 2025,
-      rating: 5.5,
-      type: "Movie",
-      image: "/path-to-chuckbilly-image.jpg",
-    },
-    {
-      id: 7,
-      title: "Chuck Billy and The Marvelous Guava Tree",
-      year: 2025,
-      rating: 5.5,
-      type: "Movie",
-      image: "/path-to-chuckbilly-image.jpg",
-    },
-    {
-      id: 8,
-      title: "Chuck Billy and The Marvelous Guava Tree",
-      year: 2025,
-      rating: 5.5,
-      type: "Movie",
-      image: "/path-to-chuckbilly-image.jpg",
-    },
-    {
-      id: 9,
-      title: "Chuck Billy and The Marvelous Guava Tree",
-      year: 2025,
-      rating: 5.5,
-      type: "Movie",
-      image: "/path-to-chuckbilly-image.jpg",
-    },
-    {
-      id: 10,
-      title: "Chuck Billy and The Marvelous Guava Tree",
-      year: 2025,
-      rating: 5.5,
-      type: "Movie",
-      image: "/path-to-chuckbilly-image.jpg",
-    },
-    {
-      id: 11,
-      title: "Chuck Billy and The Marvelous Guava Tree",
-      year: 2025,
-      rating: 5.5,
-      type: "Movie",
-      image: "/path-to-chuckbilly-image.jpg",
-    },
-    {
-      id: 12,
-      title: "Chuck Billy and The Marvelous Guava Tree",
-      year: 2025,
-      rating: 5.5,
-      type: "Movie",
-      image: "/path-to-chuckbilly-image.jpg",
-    },
-    {
-      id: 13,
-      title: "Chuck Billy and The Marvelous Guava Tree",
-      year: 2025,
-      rating: 5.5,
-      type: "Movie",
-      image: "/path-to-chuckbilly-image.jpg",
-    },
-  ]);
+  // movie from api
+  const [movies, setMovies] = useState([]);
+
+  useEffect(() => {
+    const fetchMovies = async () => {
+      try {
+        const response = await api.get("movies/");
+        setMovies(response.data);
+      } catch (e) {
+        console.error("Error fetching movies:", e);
+      }
+    };
+
+    fetchMovies();
+  }, []);
 
   const [filterMovies, setFilterMovies] = useState([...movies]);
 
@@ -187,6 +96,10 @@ function Library() {
     if (active === totalPages) return;
     setActive(active + 1);
   };
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [active]);
 
   const prev = () => {
     if (active === 1) return;
@@ -266,7 +179,7 @@ function Library() {
       {/* Movies Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 mb-8">
         {currentMovies.map((movie) => (
-          <div key={movie.id} className="h-full">
+          <div key={movie.imdbID} className="h-full">
             <MovieCard movie={movie} />
           </div>
         ))}

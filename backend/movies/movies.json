@@ -4,24 +4,27 @@
         "Year": "1999",
         "imdbID": "tt0137523",
         "Type": "movie",
+        "Rating": 9.9,
         "Poster": "https://m.media-amazon.com/images/M/MV5BOTgyOGQ1NDItNGU3Ny00MjU3LTg2YWEtNmEyYjBiMjI1Y2M5XkEyXkFqcGc@._V1_SX300.jpg",
-        "rented": false,
-        "rented_by": null
+        "rented": true,
+        "rented_by": "peta"
     },
     {
         "Title": "Oldboy",
         "Year": "2003",
         "imdbID": "tt0364569",
         "Type": "movie",
+        "Rating": 10.0,
         "Poster": "https://m.media-amazon.com/images/M/MV5BMTI3NTQyMzU5M15BMl5BanBnXkFtZTcwMTM2MjgyMQ@@._V1_SX300.jpg",
-        "rented": false,
-        "rented_by": null
+        "rented": true,
+        "rented_by": "peta"
     },
     {
         "Title": "Love Actually",
         "Year": "2003",
         "imdbID": "tt0314331",
         "Type": "movie",
+        "Rating": 8.0,
         "Poster": "https://m.media-amazon.com/images/M/MV5BYWRlZjcwYTgtYWJkOS00MGYwLTk3Y2ItNmU4NTg5Nzg2YTQ2XkEyXkFqcGc@._V1_SX300.jpg",
         "rented": false,
         "rented_by": null
@@ -31,6 +34,7 @@
         "Year": "1964",
         "imdbID": "tt0057012",
         "Type": "movie",
+        "Rating": 5.0,
         "Poster": "https://m.media-amazon.com/images/M/MV5BMjFjYzBlOTktMTI2OS00ZWVhLTgxMDUtNzAwODY2NmI3YTAzXkEyXkFqcGc@._V1_SX300.jpg",
         "rented": false,
         "rented_by": null
@@ -40,15 +44,17 @@
         "Year": "2022",
         "imdbID": "tt10648342",
         "Type": "movie",
+        "Rating": 5.6,
         "Poster": "https://m.media-amazon.com/images/M/MV5BZjRiMDhiZjQtNjk5Yi00ZDcwLTkyYTEtMDc1NjdmNjFhNGIzXkEyXkFqcGc@._V1_SX300.jpg",
-        "rented": false,
-        "rented_by": null
+        "rented": true,
+        "rented_by": "peta"
     },
     {
         "Title": "Shakespeare in Love",
         "Year": "1998",
         "imdbID": "tt0138097",
         "Type": "movie",
+        "Rating": 7.4,
         "Poster": "https://m.media-amazon.com/images/M/MV5BYmM3MTllNzYtN2MzNS00NWQwLTk0NTEtNjY1MmMwYjNkNTE5XkEyXkFqcGc@._V1_SX300.jpg",
         "rented": false,
         "rented_by": null
@@ -58,6 +64,7 @@
         "Year": "2010",
         "imdbID": "tt0758752",
         "Type": "movie",
+        "Rating": 8.9,
         "Poster": "https://m.media-amazon.com/images/M/MV5BMTgxOTczODEyMF5BMl5BanBnXkFtZTcwMDc0NDY4Mw@@._V1_SX300.jpg",
         "rented": false,
         "rented_by": null
@@ -67,6 +74,7 @@
         "Year": "2007",
         "imdbID": "tt0431308",
         "Type": "movie",
+        "Rating": 5.0,
         "Poster": "https://m.media-amazon.com/images/M/MV5BNTg2MDg4MjI5NV5BMl5BanBnXkFtZTcwMzQ0MDczMw@@._V1_SX300.jpg",
         "rented": false,
         "rented_by": null
@@ -76,6 +84,7 @@
         "Year": "2009",
         "imdbID": "tt1155056",
         "Type": "movie",
+        "Rating": 3.8,
         "Poster": "https://m.media-amazon.com/images/M/MV5BMTU4MjI5NTEyNV5BMl5BanBnXkFtZTcwNjQ1NTMzMg@@._V1_SX300.jpg",
         "rented": false,
         "rented_by": null
@@ -85,6 +94,7 @@
         "Year": "2019\u00e2\u20ac\u201c",
         "imdbID": "tt9561862",
         "Type": "series",
+        "Rating": 9.0,
         "Poster": "https://m.media-amazon.com/images/M/MV5BOTNkMmVkNzEtOGJlMi00YjlkLWFlMTQtYTRmZTllOGJhYWU4XkEyXkFqcGc@._V1_SX300.jpg",
         "rented": false,
         "rented_by": null
@@ -94,7 +104,58 @@
         "Year": "2002",
         "imdbID": "tt0272338",
         "Type": "movie",
+        "Rating": 7.0,
         "Poster": "https://m.media-amazon.com/images/M/MV5BZTYyMTQ2MDAtMzYzYS00YjZiLWJiNDUtZjEwNzM4YzE1ZDhhXkEyXkFqcGc@._V1_SX300.jpg",
+        "rented": false,
+        "rented_by": null
+    },
+    {
+        "Title": "Top Gun: Maverick",
+        "Year": "2022",
+        "imdbID": "tt1745960",
+        "Type": "movie",
+        "Rating": 8.3,
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMDBkZDNjMWEtOTdmMi00NmExLTg5MmMtNTFlYTJlNWY5YTdmXkEyXkFqcGc@._V1_SX300.jpg",
+        "rented": false,
+        "rented_by": null
+    },
+    {
+        "Title": "Spider-Man: No Way Home",
+        "Year": "2021",
+        "imdbID": "tt10872600",
+        "Type": "movie",
+        "Rating": 8.2,
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMmFiZGZjMmEtMTA0Ni00MzA2LTljMTYtZGI2MGJmZWYzZTQ2XkEyXkFqcGc@._V1_SX300.jpg",
+        "rented": false,
+        "rented_by": null
+    },
+    {
+        "Title": "Avatar: The Way of Water",
+        "Year": "2022",
+        "imdbID": "tt1630029",
+        "Type": "movie",
+        "Rating": 7.7,
+        "Poster": "https://m.media-amazon.com/images/M/MV5BNmQxNjZlZTctMWJiMC00NGMxLWJjNTctNTFiNjA1Njk3ZDQ5XkEyXkFqcGc@._V1_SX300.jpg",
+        "rented": false,
+        "rented_by": null
+    },
+    {
+        "Title": "Oppenheimer",
+        "Year": "2023",
+        "imdbID": "tt15398776",
+        "Type": "movie",
+        "Rating": 8.6,
+        "Poster": "https://m.media-amazon.com/images/M/MV5BN2JkMDc5MGQtZjg3YS00NmFiLWIyZmQtZTJmNTM5MjVmYTQ4XkEyXkFqcGc@._V1_SX300.jpg",
+        "rented": false,
+        "rented_by": null
+    },
+    {
+        "Title": "The Batman",
+        "Year": "2022",
+        "imdbID": "tt1877830",
+        "Type": "movie",
+        "Rating": 7.8,
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMmU5NGJlMzAtMGNmOC00YjJjLTgyMzUtNjAyYmE4Njg5YWMyXkEyXkFqcGc@._V1_SX300.jpg",
         "rented": false,
         "rented_by": null
     },
@@ -103,6 +164,7 @@
         "Year": "2013",
         "imdbID": "tt1343092",
         "Type": "movie",
+        "Rating": 8.0,
         "Poster": "https://m.media-amazon.com/images/M/MV5BMTkxNTk1ODcxNl5BMl5BanBnXkFtZTcwMDI1OTMzOQ@@._V1_SX300.jpg",
         "rented": false,
         "rented_by": null
@@ -112,6 +174,7 @@
         "Year": "1963",
         "imdbID": "tt0057115",
         "Type": "movie",
+        "Rating": 8.0,
         "Poster": "https://m.media-amazon.com/images/M/MV5BMDRhNmJjMzEtMWU5MC00YmEyLTg3ZmYtNzYxZTI1ZGU4ZjI1XkEyXkFqcGc@._V1_SX300.jpg",
         "rented": false,
         "rented_by": null
@@ -121,6 +184,7 @@
         "Year": "1940",
         "imdbID": "tt0032553",
         "Type": "movie",
+        "Rating": 7.5,
         "Poster": "https://m.media-amazon.com/images/M/MV5BMjc4ZjEwNDUtMjlmZS00NzQ4LTg2N2MtMGI3ZjMyMmM3ZDM2XkEyXkFqcGc@._V1_SX300.jpg",
         "rented": false,
         "rented_by": null
@@ -130,6 +194,7 @@
         "Year": "2013",
         "imdbID": "tt1623205",
         "Type": "movie",
+        "Rating": 4.0,
         "Poster": "https://m.media-amazon.com/images/M/MV5BMjMyMzQ1ODM1MF5BMl5BanBnXkFtZTcwMjE2MTQxOQ@@._V1_SX300.jpg",
         "rented": false,
         "rented_by": null
@@ -139,6 +204,7 @@
         "Year": "2016",
         "imdbID": "tt2034800",
         "Type": "movie",
+        "Rating": 5.0,
         "Poster": "https://m.media-amazon.com/images/M/MV5BMjA3MjAzOTQxNF5BMl5BanBnXkFtZTgwOTc5OTY1OTE@._V1_SX300.jpg",
         "rented": false,
         "rented_by": null
@@ -148,6 +214,7 @@
         "Year": "2013",
         "imdbID": "tt2358891",
         "Type": "movie",
+        "Rating": 5.9,
         "Poster": "https://m.media-amazon.com/images/M/MV5BMTQ0ODg1OTQ2Nl5BMl5BanBnXkFtZTgwNTc2MDY1MDE@._V1_SX300.jpg",
         "rented": false,
         "rented_by": null
@@ -157,6 +224,7 @@
         "Year": "2007",
         "imdbID": "tt0427309",
         "Type": "movie",
+        "Rating": 6.5,
         "Poster": "https://m.media-amazon.com/images/M/MV5BMTQxMDc1NzkwMF5BMl5BanBnXkFtZTcwMDI5MjU1MQ@@._V1_SX300.jpg",
         "rented": false,
         "rented_by": null
@@ -166,6 +234,7 @@
         "Year": "2020\u00e2\u20ac\u201c2023",
         "imdbID": "tt2235759",
         "Type": "series",
+        "Rating": 5.0,
         "Poster": "https://m.media-amazon.com/images/M/MV5BNTMzYTNiODktNmMyOC00NGVjLWE0ZmYtMzJjN2JhODI1MjYzXkEyXkFqcGc@._V1_SX300.jpg",
         "rented": false,
         "rented_by": null
@@ -175,6 +244,7 @@
         "Year": "1986",
         "imdbID": "tt0091149",
         "Type": "movie",
+        "Rating": 5.0,
         "Poster": "https://m.media-amazon.com/images/M/MV5BMGZmNDU5OTMtYmRkNC00NDgxLTllNDAtNzFmZDEzNWIzNTViXkEyXkFqcGc@._V1_SX300.jpg",
         "rented": false,
         "rented_by": null
@@ -184,6 +254,7 @@
         "Year": "1988",
         "imdbID": "tt0095253",
         "Type": "movie",
+        "Rating": 5.0,
         "Poster": "https://m.media-amazon.com/images/M/MV5BMjhmMWQ5YmItMWNkZi00YzMzLWFjMDctMWJjYjFhZWU3NDhjXkEyXkFqcGc@._V1_SX300.jpg",
         "rented": false,
         "rented_by": null

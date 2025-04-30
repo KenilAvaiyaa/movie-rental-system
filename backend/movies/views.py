@@ -7,6 +7,8 @@ from rest_framework.decorators import api_view
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.decorators import permission_classes
 from .serializers import UserSignupSerializer
+from rest_framework_simplejwt.views import TokenObtainPairView
+from .users.serializers import CustomTokenObtainPairSerializer
 
 @api_view(['POST'])
 def signup_view(request):
@@ -75,3 +77,7 @@ def return_movie_view(request):
             return Response({'message': 'Movie returned successfully'})
 
     return Response({'error': 'Movie not found'}, status=404)
+
+
+class CustomTokenObtainPairView(TokenObtainPairView):
+    serializer_class = CustomTokenObtainPairSerializer

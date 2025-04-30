@@ -2,11 +2,15 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import posterLogo from "../assets/movie-rentals-logo.png";
 import { Button, Spinner } from "@material-tailwind/react";
+import { useLocation } from "react-router-dom";
 
 function MovieDetails() {
+  const location = useLocation();
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
   const [loading, setLoading] = useState(true);
+  const { Poster, Title, Rating, imdbID, isRented, rentedBy } =
+    location.state || {};
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
@@ -18,7 +22,7 @@ function MovieDetails() {
         const mockMovie = {
           id: id,
           poster: "https://picsum.photos/200",
-          title: `Movie ${id}`,
+          title: `Movie ${imdbID}`,
           year: "2023",
           rating: "8.5",
           description:
@@ -38,7 +42,7 @@ function MovieDetails() {
     if (id) {
       fetchMovieDetails();
     }
-  }, [id]);
+  }, [id, imdbID]);
 
   if (loading) {
     return (
@@ -63,20 +67,20 @@ function MovieDetails() {
         {/* image */}
         <div className="w-full md:w-96 md:min-w-96 md:max-w-96 p-2 bg-opacity-75 flex items-center justify-center h-auto min-h-64">
           <img
-            src={posterLogo || "https://picsum.photos/200"}
-            alt={movie.title || "Movie Poster"}
+            src={Poster || posterLogo}
+            alt={Title || "Movie Poster"}
             className="max-w-full max-h-96 object-contain m-0"
           />
         </div>
         {/* movie details */}
         <div className="grow px-6 py-4 ">
-          <h1>{movie.title || "N/A"}</h1>
+          <h1>{Title || "N/A"}</h1>
           <div className="flex h-12 items-center">
             <Button size="md" className="">
-              Reat it?
+              Rent it?
             </Button>
             <span class="relative h-full px-8 rounded-sm before:content-[''] before:absolute before:left-1/2 before:top-0 before:bottom-0 before:w-[1px] before:bg-black"></span>
-            <p className="">⭐ {movie.rating || "N/A"}</p>
+            <p className="">⭐ {Rating || "N/A"}</p>
           </div>
           <div className="mt-5 mb-10">
             <h6 className="!mb-1 font-bold">OVERVIEW</h6>

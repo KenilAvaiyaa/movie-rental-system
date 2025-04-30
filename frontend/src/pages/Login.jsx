@@ -12,19 +12,19 @@ import {
 import { useState } from "react";
 import api from "../api/api.js";
 
-function Login() {
-  const [email, setEmail] = useState("");
+function Login({ setIsLoggedIn }) {
+  const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
   const handleLogin = async () => {
     try {
       const response = await api.post("token/", {
-        username: email,
+        username: userName,
         password: password,
       });
       localStorage.setItem("access_token", response.data.access);
-      localStorage.getItem("access_token");
+      setIsLoggedIn(true);
       navigate("/");
     } catch (error) {
       console.error(error);
@@ -46,10 +46,10 @@ function Login() {
         </CardHeader>
         <CardBody className="flex flex-col gap-4">
           <Input
-            label="Email"
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            label="Username"
+            type="text"
+            value={userName}
+            onChange={(e) => setUserName(e.target.value)}
             size="lg"
           />
           <Input
