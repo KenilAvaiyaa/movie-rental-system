@@ -3,34 +3,35 @@ import { useParams } from "react-router-dom";
 import posterLogo from "../assets/movie-rentals-logo.png";
 import { Button, Spinner } from "@material-tailwind/react";
 import { useLocation } from "react-router-dom";
+import RentButton from "../components/RentButton.jsx";
+
+const getYouTubeEmbedUrl = (url) => {
+  // Handle YouTube URLs in different formats
+  const youtubeRegExp =
+    /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+  const match = url.match(youtubeRegExp);
+
+  if (match && match[2].length === 11) {
+    // Return the embed URL
+    return `https://www.youtube.com/embed/${match[2]}`;
+  }
+
+  // If URL doesn't match, return the original
+  return url;
+};
 
 function MovieDetails() {
   const location = useLocation();
+  const { movie } = location.state || {};
   const { id } = useParams();
-  const [movie, setMovie] = useState(null);
   const [loading, setLoading] = useState(true);
-  const { Poster, Title, Rating, imdbID, isRented, rentedBy } =
-    location.state || {};
+  // console.log(movie);
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
       try {
         setLoading(true);
-        // Replace this with your actual API call
-        // Example: const response = await fetch(`/api/movies/${id}`);
-
-        const mockMovie = {
-          id: id,
-          poster: "https://picsum.photos/200",
-          title: `Movie ${imdbID}`,
-          year: "2023",
-          rating: "8.5",
-          description:
-            "This is a detailed description of the movie. You can expand this with actual data from your API.",
-        };
-
         setTimeout(() => {
-          setMovie(mockMovie);
           setLoading(false);
         }, 1000);
       } catch (error) {
@@ -42,7 +43,7 @@ function MovieDetails() {
     if (id) {
       fetchMovieDetails();
     }
-  }, [id, imdbID]);
+  }, [id]);
 
   if (loading) {
     return (
@@ -67,75 +68,78 @@ function MovieDetails() {
         {/* image */}
         <div className="w-full md:w-96 md:min-w-96 md:max-w-96 p-2 bg-opacity-75 flex items-center justify-center h-auto min-h-64">
           <img
-            src={Poster || posterLogo}
-            alt={Title || "Movie Poster"}
+            src={movie.Poster || posterLogo}
+            alt={movie.Title || "Movie Poster"}
             className="max-w-full max-h-96 object-contain m-0"
           />
         </div>
         {/* movie details */}
         <div className="grow px-6 py-4 ">
-          <h1>{Title || "N/A"}</h1>
+          <h1>{movie.Title || "N/A"}</h1>
           <div className="flex h-12 items-center">
-            <Button size="md" className="">
-              Rent it?
-            </Button>
-            <span class="relative h-full px-8 rounded-sm before:content-[''] before:absolute before:left-1/2 before:top-0 before:bottom-0 before:w-[1px] before:bg-black"></span>
-            <p className="">⭐ {Rating || "N/A"}</p>
+            <RentButton
+              imdbID={movie.imdbID}
+              initialRented={movie.rented}
+              initialRentedBy={movie.rented_by}
+              movieDetailStyle={true}
+            />
+
+            <span className="relative h-full px-8 rounded-sm before:content-[''] before:absolute before:left-1/2 before:top-0 before:bottom-0 before:w-[1px] before:bg-black"></span>
+            <p className="">⭐ {movie.Rating || "N/A"}</p>
           </div>
           <div className="mt-5 mb-10">
             <h6 className="!mb-1 font-bold">OVERVIEW</h6>
-            <p className="mt-1">{movie.description || "N/A"}</p>
+            <p className="mt-1">{movie.Description || "N/A"}</p>
           </div>
           <div className="flex flex-col md:break-words">
             <div className="flex flex-col md:flex-row">
               <div className="movie-detail-item md:w-24">Casts</div>
               <p className="m-0 break-words overflow-wrap-anywhere max-w-2xl">
-                Lorem ipsum dolor sit amet sectetur adipisicing elit. Animi,
-                quo? Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Eum quibusdam sint porro facilis, fuga temporibus omnis neque
-                maiores distinctio libero beatae ea, quasi labore! Debitis
-                voluptatem voluptas soluta excepturi placeat!
+                {}
+                {movie.Cast.join(", ") || "N/A"}
               </p>
             </div>
             <div className="flex flex-col md:flex-row">
               <div className="movie-detail-item md:w-24">Genres</div>
               <p className="m-0 break-words overflow-wrap-anywhere">
-                Lorem ipsum dolor sit
+                {movie.Genre || "N/A"}
               </p>
             </div>
             <div className="flex flex-col md:flex-row">
               <div className="movie-detail-item md:w-24">Duration</div>
-              <p className="m-0 break-words overflow-wrap-anywhere">139 min</p>
+              <p className="m-0 break-words overflow-wrap-anywhere">{"N/A"}</p>
             </div>
             <div className="flex flex-col md:flex-row">
               <div className="movie-detail-item md:w-24">Country</div>
               <p className="m-0 break-words overflow-wrap-anywhere">
-                United States
+                {movie.Country || "N/A"}
               </p>
             </div>
             <div className="flex flex-col md:flex-row">
               <div className="movie-detail-item md:w-24">Release</div>
               <p className="m-0 break-words overflow-wrap-anywhere">
-                2024-10-14
+                {movie.Year || "N/A"}
               </p>
             </div>
             <div className="flex flex-col md:flex-row">
-              <div className="movie-detail-item md:w-24">Production</div>
+              <div className="movie-detail-item md:w-24">Type</div>
               <p className="m-0 break-words overflow-wrap-anywhere">
-                Cre Film, FilmNation Entertainment
+                {movie.Type || "N/A"}
               </p>
             </div>
           </div>
         </div>
       </div>
       <div className="video-container lg:ml-[19rem] lg:px-12 lg:scale-90 p-5 pt-0">
-        <video className="h-full w-full rounded-lg mt-0" controls>
-          <source
-            src="https://docs.material-tailwind.com/demo.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
+        <div className="relative w-full" style={{ paddingTop: "56.25%" }}>
+          <iframe
+            className="absolute top-0 left-0 w-full h-full rounded-lg"
+            src={getYouTubeEmbedUrl(movie.Trailer)}
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
       </div>
     </section>
   );

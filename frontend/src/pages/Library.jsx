@@ -29,12 +29,14 @@ function Library() {
 
   // movie from api
   const [movies, setMovies] = useState([]);
+  const [filterMovies, setFilterMovies] = useState([]);
 
   useEffect(() => {
     const fetchMovies = async () => {
       try {
         const response = await api.get("movies/");
         setMovies(response.data);
+        setFilterMovies(response.data); // Initialize filtered movies with all movies
       } catch (e) {
         console.error("Error fetching movies:", e);
       }
@@ -42,8 +44,6 @@ function Library() {
 
     fetchMovies();
   }, []);
-
-  const [filterMovies, setFilterMovies] = useState([...movies]);
 
   // Apply filters function
   const applyFilters = () => {
@@ -62,26 +62,27 @@ function Library() {
 
     // Apply genre filter
     if (genre !== "All") {
-      result = result.filter((movie) => movie.genre === genre);
+      result = result.filter((movie) =>
+        movie.Genre.toLowerCase().includes(genre.toLowerCase())
+      );
     }
 
-    // Apply year filter (convert string to number for comparison)
+    // Apply year filter
     if (year !== "All") {
-      const yearNum = parseInt(year, 10);
-      result = result.filter((movie) => movie.year === yearNum);
+      result = result.filter((movie) => movie.Year === year);
     }
 
     // Apply sorting
     if (sort === "Latest") {
-      result = result.sort((a, b) => b.year - a.year);
+      result = result.sort((a, b) => parseInt(b.Year) - parseInt(a.Year));
     } else if (sort === "Rating") {
-      result = result.sort((a, b) => b.rating - a.rating);
+      result = result.sort((a, b) => b.Rating - a.Rating);
     } else if (sort === "A-Z") {
-      result = result.sort((a, b) => a.title.localeCompare(b.title));
+      result = result.sort((a, b) => a.Title.localeCompare(b.Title));
     }
 
     setFilterMovies(result);
-    setActive(1);
+    setActive(1); // Reset to the first page after filtering
   }, [movies, appliedFilters]);
 
   // total pages
@@ -163,6 +164,8 @@ function Library() {
               <Option value="2023">2023</Option>
               <Option value="2022">2022</Option>
               <Option value="2021">2021</Option>
+              <Option value="2007">2007</Option>
+              <Option value="1999">1999</Option>
             </Select>
           </div>
 

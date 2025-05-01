@@ -6,8 +6,18 @@
         "Type": "movie",
         "Rating": 9.9,
         "Poster": "https://m.media-amazon.com/images/M/MV5BOTgyOGQ1NDItNGU3Ny00MjU3LTg2YWEtNmEyYjBiMjI1Y2M5XkEyXkFqcGc@._V1_SX300.jpg",
-        "rented": true,
-        "rented_by": "peta"
+        "rented": false,
+        "rented_by": null,
+        "Genre": "Drama, Thriller",
+        "Description": "An insomniac office worker and a devil-may-care soapmaker form an underground fight club that evolves into something much more sinister.",
+        "Cast": [
+            "Brad Pitt",
+            "Edward Norton",
+            "Helena Bonham Carter",
+            "Jared Leto"
+        ],
+        "Country": "USA, Germany",
+        "Trailer": "https://www.youtube.com/watch?v=SUXWAEX2jlg"
     },
     {
         "Title": "Oldboy",
@@ -16,8 +26,18 @@
         "Type": "movie",
         "Rating": 10.0,
         "Poster": "https://m.media-amazon.com/images/M/MV5BMTI3NTQyMzU5M15BMl5BanBnXkFtZTcwMTM2MjgyMQ@@._V1_SX300.jpg",
-        "rented": true,
-        "rented_by": "peta"
+        "rented": false,
+        "rented_by": null,
+        "Genre": "Action, Drama, Mystery, Thriller",
+        "Description": "After being kidnapped and imprisoned for fifteen years, Oh Dae-Su is released, only to find that he must find his captor in five days.",
+        "Cast": [
+            "Choi Min-sik",
+            "Yoo Ji-tae",
+            "Kang Hye-jung",
+            "Ji Dae-han"
+        ],
+        "Country": "South Korea",
+        "Trailer": "https://www.youtube.com/watch?v=2HkjrJ6IK5E"
     },
     {
         "Title": "Love Actually",
@@ -27,7 +47,18 @@
         "Rating": 8.0,
         "Poster": "https://m.media-amazon.com/images/M/MV5BYWRlZjcwYTgtYWJkOS00MGYwLTk3Y2ItNmU4NTg5Nzg2YTQ2XkEyXkFqcGc@._V1_SX300.jpg",
         "rented": false,
-        "rented_by": null
+        "rented_by": null,
+        "Genre": "Comedy, Drama, Romance",
+        "Description": "Follows the lives of eight very different couples dealing with their love lives in various loosely interrelated tales all set during a frantic month before Christmas in London.",
+        "Cast": [
+            "Hugh Grant",
+            "Liam Neeson",
+            "Colin Firth",
+            "Emma Thompson",
+            "Keira Knightley"
+        ],
+        "Country": "UK, USA, France",
+        "Trailer": "https://www.youtube.com/watch?v=H9Z3_ifFheQ"
     },
     {
         "Title": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
@@ -37,7 +68,17 @@
         "Rating": 5.0,
         "Poster": "https://m.media-amazon.com/images/M/MV5BMjFjYzBlOTktMTI2OS00ZWVhLTgxMDUtNzAwODY2NmI3YTAzXkEyXkFqcGc@._V1_SX300.jpg",
         "rented": false,
-        "rented_by": null
+        "rented_by": null,
+        "Genre": "Comedy, War",
+        "Description": "An insane general triggers a path to nuclear holocaust that a War Room full of politicians and generals frantically tries to stop.",
+        "Cast": [
+            "Peter Sellers",
+            "George C. Scott",
+            "Sterling Hayden",
+            "Keenan Wynn"
+        ],
+        "Country": "USA, UK",
+        "Trailer": "https://www.youtube.com/watch?v=jPU1AYTxwg4"
     },
     {
         "Title": "Thor: Love and Thunder",
@@ -46,8 +87,18 @@
         "Type": "movie",
         "Rating": 5.6,
         "Poster": "https://m.media-amazon.com/images/M/MV5BZjRiMDhiZjQtNjk5Yi00ZDcwLTkyYTEtMDc1NjdmNjFhNGIzXkEyXkFqcGc@._V1_SX300.jpg",
-        "rented": true,
-        "rented_by": "peta"
+        "rented": false,
+        "rented_by": null,
+        "Genre": "Action, Adventure, Comedy, Fantasy",
+        "Description": "Thor enlists the help of Valkyrie, Korg and ex-girlfriend Jane Foster to fight Gorr the God Butcher, who intends to make the gods extinct.",
+        "Cast": [
+            "Chris Hemsworth",
+            "Natalie Portman",
+            "Christian Bale",
+            "Tessa Thompson"
+        ],
+        "Country": "USA, Australia",
+        "Trailer": "https://www.youtube.com/watch?v=Go8nTmfrQd8"
     },
     {
         "Title": "Shakespeare in Love",
@@ -57,7 +108,17 @@
         "Rating": 7.4,
         "Poster": "https://m.media-amazon.com/images/M/MV5BYmM3MTllNzYtN2MzNS00NWQwLTk0NTEtNjY1MmMwYjNkNTE5XkEyXkFqcGc@._V1_SX300.jpg",
         "rented": false,
-        "rented_by": null
+        "rented_by": null,
+        "Genre": "Comedy, Drama, History, Romance",
+        "Description": "A young Shakespeare, out of ideas and short of cash, meets his ideal woman and is inspired to write one of his most famous plays.",
+        "Cast": [
+            "Gwyneth Paltrow",
+            "Joseph Fiennes",
+            "Geoffrey Rush",
+            "Judi Dench"
+        ],
+        "Country": "USA, UK",
+        "Trailer": "https://www.youtube.com/watch?v=FuUJxvdW7N0"
     },
     {
         "Title": "Love & Other Drugs",
@@ -67,7 +128,17 @@
         "Rating": 8.9,
         "Poster": "https://m.media-amazon.com/images/M/MV5BMTgxOTczODEyMF5BMl5BanBnXkFtZTcwMDc0NDY4Mw@@._V1_SX300.jpg",
         "rented": false,
-        "rented_by": null
+        "rented_by": null,
+        "Genre": "Comedy, Drama, Romance",
+        "Description": "A young woman suffering from Parkinson's befriends a drug rep working for Pfizer in 1990s Pittsburgh.",
+        "Cast": [
+            "Jake Gyllenhaal",
+            "Anne Hathaway",
+            "Oliver Platt",
+            "Hank Azaria"
+        ],
+        "Country": "USA",
+        "Trailer": "https://www.youtube.com/watch?v=h6w7Dh-QxzY"
     },
     {
         "Title": "P.S. I Love You",
@@ -77,7 +148,17 @@
         "Rating": 5.0,
         "Poster": "https://m.media-amazon.com/images/M/MV5BNTg2MDg4MjI5NV5BMl5BanBnXkFtZTcwMzQ0MDczMw@@._V1_SX300.jpg",
         "rented": false,
-        "rented_by": null
+        "rented_by": null,
+        "Genre": "Comedy, Drama, Romance",
+        "Description": "A young widow discovers that her late husband has left her 10 messages intended to help ease her pain and start a new life.",
+        "Cast": [
+            "Hilary Swank",
+            "Gerard Butler",
+            "Lisa Kudrow",
+            "Gina Gershon"
+        ],
+        "Country": "USA",
+        "Trailer": "https://www.youtube.com/watch?v=CZzW6_hR5R0"
     },
     {
         "Title": "I Love You, Man",
@@ -87,17 +168,37 @@
         "Rating": 3.8,
         "Poster": "https://m.media-amazon.com/images/M/MV5BMTU4MjI5NTEyNV5BMl5BanBnXkFtZTcwNjQ1NTMzMg@@._V1_SX300.jpg",
         "rented": false,
-        "rented_by": null
+        "rented_by": null,
+        "Genre": "Comedy, Romance",
+        "Description": "Friendless Peter Klaven goes on a series of man-dates to find a Best Man for his wedding. But, when his insta-bond with his new B.F.F. puts a strain on his relationship with his fianc\u00c3\u00a9e, can the trio learn to live happily ever after?",
+        "Cast": [
+            "Paul Rudd",
+            "Jason Segel",
+            "Rashida Jones",
+            "Andy Samberg"
+        ],
+        "Country": "USA",
+        "Trailer": "https://www.youtube.com/watch?v=Zf2RfUxmr2M"
     },
     {
         "Title": "Love, Death & Robots",
-        "Year": "2019\u00e2\u20ac\u201c",
+        "Year": "2019",
         "imdbID": "tt9561862",
         "Type": "series",
         "Rating": 9.0,
         "Poster": "https://m.media-amazon.com/images/M/MV5BOTNkMmVkNzEtOGJlMi00YjlkLWFlMTQtYTRmZTllOGJhYWU4XkEyXkFqcGc@._V1_SX300.jpg",
         "rented": false,
-        "rented_by": null
+        "rented_by": null,
+        "Genre": "Animation, Short, Comedy, Drama, Fantasy, Horror, Sci-Fi",
+        "Description": "A collection of animated short stories that span various genres including science fiction, fantasy, horror and comedy.",
+        "Cast": [
+            "Fred Tatasciore",
+            "Scott Whyte",
+            "Nolan North",
+            "Noshir Dalal"
+        ],
+        "Country": "USA",
+        "Trailer": "https://www.youtube.com/watch?v=wUFwunMKa4E"
     },
     {
         "Title": "Punch-Drunk Love",
@@ -107,7 +208,17 @@
         "Rating": 7.0,
         "Poster": "https://m.media-amazon.com/images/M/MV5BZTYyMTQ2MDAtMzYzYS00YjZiLWJiNDUtZjEwNzM4YzE1ZDhhXkEyXkFqcGc@._V1_SX300.jpg",
         "rented": false,
-        "rented_by": null
+        "rented_by": null,
+        "Genre": "Comedy, Drama, Romance",
+        "Description": "A psychologically troubled novelty supplier is nudged towards a romance with an English woman, all the while being extorted by a phone-sex line run by a crooked mattress salesman.",
+        "Cast": [
+            "Adam Sandler",
+            "Emily Watson",
+            "Philip Seymour Hoffman",
+            "Luis Guzm\u00c3\u00a1n"
+        ],
+        "Country": "USA",
+        "Trailer": "https://www.youtube.com/watch?v=2mTLO2F_ERY"
     },
     {
         "Title": "Top Gun: Maverick",
@@ -117,7 +228,17 @@
         "Rating": 8.3,
         "Poster": "https://m.media-amazon.com/images/M/MV5BMDBkZDNjMWEtOTdmMi00NmExLTg5MmMtNTFlYTJlNWY5YTdmXkEyXkFqcGc@._V1_SX300.jpg",
         "rented": false,
-        "rented_by": null
+        "rented_by": null,
+        "Genre": "Action, Drama",
+        "Description": "After more than thirty years of service as one of the Navy's top aviators, Pete Mitchell is where he belongs, pushing the envelope as a courageous test pilot and dodging the advancement in rank that would ground him.",
+        "Cast": [
+            "Tom Cruise",
+            "Jennifer Connelly",
+            "Miles Teller",
+            "Val Kilmer"
+        ],
+        "Country": "USA",
+        "Trailer": "https://www.youtube.com/watch?v=qSqVVswa420"
     },
     {
         "Title": "Spider-Man: No Way Home",
@@ -127,7 +248,17 @@
         "Rating": 8.2,
         "Poster": "https://m.media-amazon.com/images/M/MV5BMmFiZGZjMmEtMTA0Ni00MzA2LTljMTYtZGI2MGJmZWYzZTQ2XkEyXkFqcGc@._V1_SX300.jpg",
         "rented": false,
-        "rented_by": null
+        "rented_by": null,
+        "Genre": "Action, Adventure, Fantasy, Sci-Fi",
+        "Description": "With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man.",
+        "Cast": [
+            "Tom Holland",
+            "Zendaya",
+            "Benedict Cumberbatch",
+            "Jacob Batalon"
+        ],
+        "Country": "USA",
+        "Trailer": "https://www.youtube.com/watch?v=JfVOs4VSpmA"
     },
     {
         "Title": "Avatar: The Way of Water",
@@ -137,7 +268,17 @@
         "Rating": 7.7,
         "Poster": "https://m.media-amazon.com/images/M/MV5BNmQxNjZlZTctMWJiMC00NGMxLWJjNTctNTFiNjA1Njk3ZDQ5XkEyXkFqcGc@._V1_SX300.jpg",
         "rented": false,
-        "rented_by": null
+        "rented_by": null,
+        "Genre": "Action, Adventure, Fantasy, Sci-Fi",
+        "Description": "Jake Sully lives with his newfound family formed on the extrasolar moon Pandora. Once a familiar threat returns to finish what was previously started, Jake must work with Neytiri and the army of the Na'vi race to protect their home.",
+        "Cast": [
+            "Sam Worthington",
+            "Zoe Saldana",
+            "Sigourney Weaver",
+            "Stephen Lang"
+        ],
+        "Country": "USA",
+        "Trailer": "https://www.youtube.com/watch?v=o5F8MOz_IDw"
     },
     {
         "Title": "Oppenheimer",
@@ -147,7 +288,17 @@
         "Rating": 8.6,
         "Poster": "https://m.media-amazon.com/images/M/MV5BN2JkMDc5MGQtZjg3YS00NmFiLWIyZmQtZTJmNTM5MjVmYTQ4XkEyXkFqcGc@._V1_SX300.jpg",
         "rented": false,
-        "rented_by": null
+        "rented_by": null,
+        "Genre": "Biography, Drama, History",
+        "Description": "The story of American scientist J. Robert Oppenheimer and his role in the development of the atomic bomb.",
+        "Cast": [
+            "Cillian Murphy",
+            "Emily Blunt",
+            "Matt Damon",
+            "Robert Downey Jr."
+        ],
+        "Country": "USA, UK",
+        "Trailer": "https://www.youtube.com/watch?v=uYPbbksJxIg"
     },
     {
         "Title": "The Batman",
@@ -157,7 +308,17 @@
         "Rating": 7.8,
         "Poster": "https://m.media-amazon.com/images/M/MV5BMmU5NGJlMzAtMGNmOC00YjJjLTgyMzUtNjAyYmE4Njg5YWMyXkEyXkFqcGc@._V1_SX300.jpg",
         "rented": false,
-        "rented_by": null
+        "rented_by": null,
+        "Genre": "Action, Crime, Drama, Mystery",
+        "Description": "When a sadistic serial killer begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption and question his family's involvement.",
+        "Cast": [
+            "Robert Pattinson",
+            "Zo\u00c3\u00ab Kravitz",
+            "Jeffrey Wright",
+            "Colin Farrell"
+        ],
+        "Country": "USA, UK",
+        "Trailer": "https://www.youtube.com/watch?v=mqqft2x_Aa4"
     },
     {
         "Title": "The Great Gatsby",
@@ -167,7 +328,17 @@
         "Rating": 8.0,
         "Poster": "https://m.media-amazon.com/images/M/MV5BMTkxNTk1ODcxNl5BMl5BanBnXkFtZTcwMDI1OTMzOQ@@._V1_SX300.jpg",
         "rented": false,
-        "rented_by": null
+        "rented_by": null,
+        "Genre": "Drama, Romance",
+        "Description": "A writer and wall street trader, Nick, finds himself drawn to the past and lifestyle of his millionaire neighbor, Jay Gatsby.",
+        "Cast": [
+            "Leonardo DiCaprio",
+            "Carey Mulligan",
+            "Joel Edgerton",
+            "Tobey Maguire"
+        ],
+        "Country": "Australia, USA",
+        "Trailer": "https://www.youtube.com/watch?v=rARN6agiW7o"
     },
     {
         "Title": "The Great Escape",
@@ -177,7 +348,17 @@
         "Rating": 8.0,
         "Poster": "https://m.media-amazon.com/images/M/MV5BMDRhNmJjMzEtMWU5MC00YmEyLTg3ZmYtNzYxZTI1ZGU4ZjI1XkEyXkFqcGc@._V1_SX300.jpg",
         "rented": false,
-        "rented_by": null
+        "rented_by": null,
+        "Genre": "Adventure, Drama, History, War",
+        "Description": "Allied prisoners of war plan for several hundred of their number to escape from a German camp during World War II.",
+        "Cast": [
+            "Steve McQueen",
+            "James Garner",
+            "Richard Attenborough",
+            "Charles Bronson"
+        ],
+        "Country": "USA",
+        "Trailer": "https://www.youtube.com/watch?v=r9Q_WESQUVw"
     },
     {
         "Title": "The Great Dictator",
@@ -187,7 +368,17 @@
         "Rating": 7.5,
         "Poster": "https://m.media-amazon.com/images/M/MV5BMjc4ZjEwNDUtMjlmZS00NzQ4LTg2N2MtMGI3ZjMyMmM3ZDM2XkEyXkFqcGc@._V1_SX300.jpg",
         "rented": false,
-        "rented_by": null
+        "rented_by": null,
+        "Genre": "Comedy, Drama, War",
+        "Description": "Dictator Adenoid Hynkel tries to expand his empire while a poor Jewish barber tries to avoid persecution from Hynkel's regime.",
+        "Cast": [
+            "Charles Chaplin",
+            "Paulette Goddard",
+            "Jack Oakie",
+            "Reginald Gardiner"
+        ],
+        "Country": "USA",
+        "Trailer": "https://www.youtube.com/watch?v=k8bVG8XC-4I"
     },
     {
         "Title": "Oz the Great and Powerful",
@@ -197,7 +388,17 @@
         "Rating": 4.0,
         "Poster": "https://m.media-amazon.com/images/M/MV5BMjMyMzQ1ODM1MF5BMl5BanBnXkFtZTcwMjE2MTQxOQ@@._V1_SX300.jpg",
         "rented": false,
-        "rented_by": null
+        "rented_by": null,
+        "Genre": "Adventure, Family, Fantasy",
+        "Description": "A small-time magician is swept away to an enchanted land and is forced into a power struggle between three witches.",
+        "Cast": [
+            "James Franco",
+            "Mila Kunis",
+            "Rachel Weisz",
+            "Michelle Williams"
+        ],
+        "Country": "USA",
+        "Trailer": "https://www.youtube.com/watch?v=DylgNj4YQVc"
     },
     {
         "Title": "The Great Wall",
@@ -207,7 +408,17 @@
         "Rating": 5.0,
         "Poster": "https://m.media-amazon.com/images/M/MV5BMjA3MjAzOTQxNF5BMl5BanBnXkFtZTgwOTc5OTY1OTE@._V1_SX300.jpg",
         "rented": false,
-        "rented_by": null
+        "rented_by": null,
+        "Genre": "Action, Adventure, Fantasy, Thriller",
+        "Description": "In ancient China, a group of European mercenaries encounters a secret army that maintains and defends the Great Wall of China against a horde of monstrous creatures.",
+        "Cast": [
+            "Matt Damon",
+            "Tian Jing",
+            "Willem Dafoe",
+            "Andy Lau"
+        ],
+        "Country": "China, USA",
+        "Trailer": "https://www.youtube.com/watch?v=avF6GHyyk5c"
     },
     {
         "Title": "The Great Beauty",
@@ -217,7 +428,17 @@
         "Rating": 5.9,
         "Poster": "https://m.media-amazon.com/images/M/MV5BMTQ0ODg1OTQ2Nl5BMl5BanBnXkFtZTgwNTc2MDY1MDE@._V1_SX300.jpg",
         "rented": false,
-        "rented_by": null
+        "rented_by": null,
+        "Genre": "Drama",
+        "Description": "Jep Gambardella has seduced his way through the lavish nightlife of Rome for decades, but after his 65th birthday and a shock from the past, Jep looks past the nightclubs and parties to find a timeless landscape of absurd, exquisite beauty.",
+        "Cast": [
+            "Toni Servillo",
+            "Carlo Verdone",
+            "Sabrina Ferilli",
+            "Carlo Buccirosso"
+        ],
+        "Country": "Italy, France",
+        "Trailer": "https://www.youtube.com/watch?v=Dyt430YkQn0"
     },
     {
         "Title": "The Great Debaters",
@@ -227,17 +448,37 @@
         "Rating": 6.5,
         "Poster": "https://m.media-amazon.com/images/M/MV5BMTQxMDc1NzkwMF5BMl5BanBnXkFtZTcwMDI5MjU1MQ@@._V1_SX300.jpg",
         "rented": false,
-        "rented_by": null
+        "rented_by": null,
+        "Genre": "Biography, Drama",
+        "Description": "A drama based on the true story of Melvin B. Tolson, a professor at Wiley College Texas. In 1935, he inspired students to form the school's first debate team, which went on to challenge Harvard in the national championship.",
+        "Cast": [
+            "Denzel Washington",
+            "Forest Whitaker",
+            "Kimberly Elise",
+            "Nate Parker"
+        ],
+        "Country": "USA",
+        "Trailer": "https://www.youtube.com/watch?v=IN2AGZThL-8"
     },
     {
         "Title": "The Great",
-        "Year": "2020\u00e2\u20ac\u201c2023",
+        "Year": "2023",
         "imdbID": "tt2235759",
         "Type": "series",
         "Rating": 5.0,
         "Poster": "https://m.media-amazon.com/images/M/MV5BNTMzYTNiODktNmMyOC00NGVjLWE0ZmYtMzJjN2JhODI1MjYzXkEyXkFqcGc@._V1_SX300.jpg",
         "rented": false,
-        "rented_by": null
+        "rented_by": null,
+        "Genre": "Biography, Comedy, Drama, History",
+        "Description": "A royal woman living in rural Russia during the 18th century is forced to choose between her own personal happiness and the future of Russia, when she marries an Emperor.",
+        "Cast": [
+            "Elle Fanning",
+            "Nicholas Hoult",
+            "Phoebe Fox",
+            "Sacha Dhawan"
+        ],
+        "Country": "USA, UK, Australia",
+        "Trailer": "https://www.youtube.com/watch?v=1sMrtt7sAR8"
     },
     {
         "Title": "The Great Mouse Detective",
@@ -247,7 +488,17 @@
         "Rating": 5.0,
         "Poster": "https://m.media-amazon.com/images/M/MV5BMGZmNDU5OTMtYmRkNC00NDgxLTllNDAtNzFmZDEzNWIzNTViXkEyXkFqcGc@._V1_SX300.jpg",
         "rented": false,
-        "rented_by": null
+        "rented_by": null,
+        "Genre": "Animation, Adventure, Family, Mystery",
+        "Description": "Basil, the rodent Sherlock Holmes, investigates the kidnapping of a toy maker and uncovers its link to his archenemy, Professor Ratigan.",
+        "Cast": [
+            "Vincent Price",
+            "Barrie Ingham",
+            "Val Bettin",
+            "Susanne Pollatschek"
+        ],
+        "Country": "USA",
+        "Trailer": "https://www.youtube.com/watch?v=uHyICKt5m-c"
     },
     {
         "Title": "The Great Outdoors",
@@ -257,6 +508,16 @@
         "Rating": 5.0,
         "Poster": "https://m.media-amazon.com/images/M/MV5BMjhmMWQ5YmItMWNkZi00YzMzLWFjMDctMWJjYjFhZWU3NDhjXkEyXkFqcGc@._V1_SX300.jpg",
         "rented": false,
-        "rented_by": null
+        "rented_by": null,
+        "Genre": "Comedy",
+        "Description": "A Chicago man's hope for a peaceful family vacation in the woods is shattered when the annoying in-laws drop in.",
+        "Cast": [
+            "Dan Aykroyd",
+            "John Candy",
+            "Stephanie Faracy",
+            "Annette Bening"
+        ],
+        "Country": "USA",
+        "Trailer": "https://www.youtube.com/watch?v=4c3zcZpvRLk"
     }
 ]

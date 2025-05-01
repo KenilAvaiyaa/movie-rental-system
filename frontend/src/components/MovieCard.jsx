@@ -8,8 +8,7 @@ import {
   Typography,
   Button,
 } from "@material-tailwind/react";
-import api from "../api/api.js";
-import { useState } from "react";
+import RentButton from "./RentButton.jsx";
 
 const getUsernameFromToken = () => {
   const token = localStorage.getItem("access_token");
@@ -25,74 +24,14 @@ const getUsernameFromToken = () => {
 };
 
 function MovieCard({ movie }) {
-  const [isRented, setIsRented] = useState(movie.rented);
-  const [rentedBy, setRentedBy] = useState(movie.rented_by);
-
   const currentUser = getUsernameFromToken();
   console.log(currentUser);
-  const token = localStorage.getItem("access_token");
-  const isLoggedIn = !!token; // true if token exists
-
-  const handleRetuernClick = async (e) => {
-    e.stopPropagation();
-    e.preventDefault();
-
-    alert("Movie Returned!");
-
-    try {
-      const token = localStorage.getItem("access_token");
-      await api.post(
-        "return/",
-        {
-          imdbID: movie.imdbID,
-        },
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
-    } catch (e) {
-      console.error("Error returning movie", e);
-    }
-
-    setIsRented(false);
-    setRentedBy(null);
-  };
-
-  const handleActualRentClick = async (e) => {
-    e.stopPropagation();
-    e.preventDefault();
-
-    // Here you will actually call Rent API
-    alert("Renting the movie...");
-    try {
-      const token = localStorage.getItem("access_token");
-      await api.post(
-        "rent/",
-        {
-          imdbID: movie.imdbID,
-        },
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
-      setIsRented(true);
-      setRentedBy(currentUser);
-
-      alert("Movie rented successfully!");
-    } catch (e) {
-      console.error("Error renting movie:", e);
-    }
-  };
 
   return (
     <Card className="w-full h-full p-4 !bg-none !rounded-none !shadow-none hover:scale-[1.02] hover:cursor-pointer transition-all duration-[0.3s]">
       <Link
         to={`/movie/${movie.imdbID}`}
-        state={{ ...movie, isRented, rentedBy }}
+        state={{ movie }}
         className="block w-full h-full"
       >
         <div className="relative">
@@ -134,46 +73,12 @@ function MovieCard({ movie }) {
         </CardBody>
       </Link>
       <CardFooter className="p-0 ">
-        {!isLoggedIn ? (
-          <Button
-            size="lg"
-            variant="gradient"
-            color="light-grey"
-            className="group relative flex items-center gap-3 overflow-hidden pr-[72px] w-full rounded-bl-lg rounded-br-lg rounded-t-none hover:bg-blue-gray hover:text-accent"
-            disabled={!isLoggedIn}
-          >
-            Login to rent!
-          </Button>
-        ) : isRented && rentedBy === currentUser ? (
-          <Button
-            size="lg"
-            variant="outlined"
-            className="group relative flex items-center gap-3 overflow-hidden pr-[72px] w-full rounded-bl-lg rounded-br-lg rounded-t-none bg-cyan-400 border-none text-white"
-            onClick={handleRetuernClick}
-          >
-            Return Movie
-          </Button>
-        ) : isRented ? (
-          <Button
-            size="lg"
-            variant="gradient"
-            color="light-grey"
-            className="group relative flex items-center gap-3 overflow-hidden pr-[72px] w-full rounded-bl-lg rounded-br-lg rounded-t-none hover:bg-blue-gray hover:text-accent"
-            disabled
-          >
-            Already Rented
-          </Button>
-        ) : (
-          <Button
-            size="lg"
-            variant="gradient"
-            color="light-grey"
-            className="group relative flex items-center gap-3 overflow-hidden pr-[72px] w-full rounded-bl-lg rounded-br-lg rounded-t-none hover:bg-blue-gray hover:text-accent"
-            onClick={handleActualRentClick}
-          >
-            Rent this?
-          </Button>
-        )}
+        <RentButton
+          imdbID={movie.imdbID}
+          initialRented={movie.rented}
+          initialRentedBy={movie.rented_by}
+          movieDetailStyle={false}
+        />
       </CardFooter>
     </Card>
   );
