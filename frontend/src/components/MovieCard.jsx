@@ -65,9 +65,9 @@ function MovieCard({ movie }) {
           color="light-grey"
           className="group relative flex items-center gap-3 overflow-hidden pr-[72px] w-full rounded-bl-lg rounded-br-lg rounded-t-none hover:bg-blue-gray hover:text-accent"
           onClick={handleRentClick}
-          disabled
+          disabled={movie.rented}
         >
-          Rent this?
+          {movie.rented ? 'Rented' : 'Rent this'}
         </Button>
       </CardFooter>
     </Card>

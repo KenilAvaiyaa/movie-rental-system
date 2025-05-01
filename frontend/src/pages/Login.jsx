@@ -1,4 +1,5 @@
-import { Link, Navigate, useNavigate } from "react-router-dom";
+// import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import {
   Card,
   CardHeader,
@@ -15,20 +16,37 @@ import api from "../api/api.js";
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const handleLogin = async () => {
+    // try {
+    //   const response = await api.post("token/", {
+    //     username: email,
+    //     password: password,
+    //   });
+    //   localStorage.setItem("access_token", response.data.access);
+    //   localStorage.getItem("access_token");
+    //   navigate("/");
+    // } catch (error) {
+    //   console.error(error);
+    //   alert("You my friend are a imposter!!!!!");
+    // }
     try {
       const response = await api.post("token/", {
         username: email,
         password: password,
       });
+  
+      // Save token to localStorage
       localStorage.setItem("access_token", response.data.access);
-      localStorage.getItem("access_token");
-      navigate("/");
+      localStorage.setItem("refresh_token", response.data.refresh);
+  
+      // OPTIONAL: If you want navbar to re-check login, reload the page
+      window.location.href = "/";
+  
     } catch (error) {
       console.error(error);
-      alert("You my friend are a imposter!!!!!");
+      alert("Invalid credentials. Please try again.");
     }
   };
 
