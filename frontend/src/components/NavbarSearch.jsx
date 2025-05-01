@@ -10,9 +10,13 @@ import {
   Input,
 } from "@material-tailwind/react";
 import rentalLogo from "../assets/movie-rentals-logo.png";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export function NavbarSearch({ isLoggedIn, setIsLoggedIn }) {
   const [openNav, setOpenNav] = React.useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const navigate = useNavigate();
 
   // const token = localStorage.getItem("access_token");
   // const isLoggedIn = !!token;
@@ -167,6 +171,8 @@ export function NavbarSearch({ isLoggedIn, setIsLoggedIn }) {
               containerProps={{
                 className: "min-w-[100px]",
               }}
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
             />
             <div className="!absolute left-3 top-[13px]">
               <svg
@@ -192,7 +198,13 @@ export function NavbarSearch({ isLoggedIn, setIsLoggedIn }) {
           </div>
           <Button
             size="md"
-            className="rounded-lg hover:bg-blue-gray bg-cyan-400 text-black "
+            className="rounded-lg hover:bg-blue-gray bg-cyan-400 text-black"
+            onClick={() => {
+              if (searchQuery.trim() !== "") {
+                navigate(`/search/${encodeURIComponent(searchQuery.trim())}`);
+                setSearchQuery("");
+              }
+            }}
           >
             Search
           </Button>
@@ -276,6 +288,11 @@ export function NavbarSearch({ isLoggedIn, setIsLoggedIn }) {
             <Button
               size="md"
               className="mt-3 sm:mt-0 rounded-md bg-cyan-400 text-black "
+              onClick={() => {
+                if (searchQuery.trim() !== "") {
+                  navigate(`/search/${encodeURIComponent(searchQuery.trim())}`);
+                }
+              }}
             >
               Search
             </Button>

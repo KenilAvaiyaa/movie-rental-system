@@ -10,6 +10,7 @@ import UserRentedMovies from "./pages/UserRentedMovies.jsx";
 import Signup from "./pages/SignUp.jsx";
 import React from "react";
 import { useState, useEffect } from "react";
+import Footer from "./components/Footer.jsx";
 
 function App() {
   // const [token, setToken] = useState(null);
@@ -44,6 +45,7 @@ function App() {
           <Route path="/movie/:id" element={<MovieDetails />} />
           <Route path="/search/:movieName" element={<Search />} />
           <Route path="/library" element={<Library />} />
+
           <Route
             path="/login"
             element={
@@ -61,6 +63,7 @@ function App() {
           />
         </Routes>
       </main>
+      <Footer />
     </Router>
   );
 }

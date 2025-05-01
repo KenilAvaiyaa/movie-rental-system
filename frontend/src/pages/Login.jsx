@@ -11,11 +11,14 @@ import {
 } from "@material-tailwind/react";
 import { useState } from "react";
 import api from "../api/api.js";
+import { useEffect } from "react";
 
 function Login({ setIsLoggedIn }) {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+
+  const [showAlert, setShowAlert] = useState(false);
 
   const handleLogin = async () => {
     try {
@@ -25,12 +28,21 @@ function Login({ setIsLoggedIn }) {
       });
       localStorage.setItem("access_token", response.data.access);
       setIsLoggedIn(true);
+      setShowAlert(true);
+
       navigate("/");
     } catch (error) {
       console.error(error);
       alert("You my friend are a imposter!!!!!");
     }
   };
+
+  useEffect(() => {
+    if (showAlert) {
+      const timer = setTimeout(() => setShowAlert(false), 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [showAlert]);
 
   return (
     <main className="flex h-[calc(100vh-110px)] w-full items-center justify-center">

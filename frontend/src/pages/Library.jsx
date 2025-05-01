@@ -36,7 +36,7 @@ function Library() {
       try {
         const response = await api.get("movies/");
         setMovies(response.data);
-        setFilterMovies(response.data); // Initialize filtered movies with all movies
+        setFilterMovies(response.data);
       } catch (e) {
         console.error("Error fetching movies:", e);
       }
