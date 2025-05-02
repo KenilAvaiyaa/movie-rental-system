@@ -12,11 +12,9 @@ const getYouTubeEmbedUrl = (url) => {
   const match = url.match(youtubeRegExp);
 
   if (match && match[2].length === 11) {
-    // Return the embed URL
     return `https://www.youtube.com/embed/${match[2]}`;
   }
 
-  // If URL doesn't match, return the original
   return url;
 };
 

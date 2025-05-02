@@ -25,7 +25,7 @@ const getUsernameFromToken = () => {
 
 function MovieCard({ movie }) {
   const currentUser = getUsernameFromToken();
-  console.log(currentUser);
+  // console.log(currentUser);
 
   return (
     <Card className="w-full h-full p-4 !bg-none !rounded-none !shadow-none hover:scale-[1.02] hover:cursor-pointer transition-all duration-[0.3s]">

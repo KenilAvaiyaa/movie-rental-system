@@ -1,0 +1,18 @@
+# docker-compose.yml
+
+services:
+  backend:
+    build: ./backend
+    container_name: movie_backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+
+  frontend:
+    build: ./frontend
+    container_name: movie_frontend
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    tty: true
