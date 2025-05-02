@@ -46,9 +46,9 @@ A Django-based Movie Catalog where users can browse, search, filter, rent, and m
 1. Clone this repository.
 
 2. Create and activate a virtual environment:
+   Stay in the root directory
 
    ```bash
-   cd backend
    python -m venv venv
    source venv/bin/activate  # For Windows: venv\Scripts\activate
    ```
@@ -56,6 +56,7 @@ A Django-based Movie Catalog where users can browse, search, filter, rent, and m
 3. Install dependencies:
 
    ```bash
+   cd backend
    pip install -r requirements.txt
    ```
 
